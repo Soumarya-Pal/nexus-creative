@@ -684,9 +684,29 @@
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+    
+    .service-content,
+    .service-content.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: var(--space-2xl);
+    }
+    
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
+    :root {
+        --space-4xl: 4rem;
+        --space-3xl: 3rem;
+    }
+    
+    .container {
+        padding: 0 var(--space-md);
+    }
+    
     .nav-links {
         display: none;
     }
@@ -706,25 +726,78 @@
         padding: var(--space-xl);
         border-bottom: 1px solid var(--border-color);
         box-shadow: var(--shadow-lg);
+        gap: var(--space-md);
+    }
+    
+    .nav-links.active .nav-link {
+        padding: var(--space-md);
+        font-size: 1.1rem;
+    }
+    
+    .nav-actions .btn {
+        display: none;
     }
 
     .hero {
         min-height: auto;
-        padding: calc(var(--header-height) + var(--space-3xl)) 0 var(--space-3xl);
+        padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-2xl);
+    }
+    
+    .hero-title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: var(--space-xs) var(--space-md);
     }
 
     .testimonial-card {
-        min-width: 300px;
+        min-width: 280px;
+        padding: var(--space-xl);
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
     }
 
     .stats-grid {
         grid-template-columns: 1fr 1fr;
         gap: var(--space-lg);
     }
+    
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+    
+    .stat-item p {
+        font-size: 0.875rem;
+    }
 
     .footer-grid {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
+    }
+    
+    .footer-brand {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-links {
+        align-items: center;
     }
 
     .footer-bottom {
@@ -735,11 +808,83 @@
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
+    
+    .portfolio-filter {
+        gap: var(--space-sm);
+    }
+    
+    .filter-btn {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.875rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    .page-header {
+        padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-2xl);
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .cta h2 {
+        font-size: 1.75rem;
+    }
+    
+    .cta p {
+        font-size: 1rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+    
+    .team-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        padding: var(--space-lg);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-container {
+        margin: 0 var(--space-md);
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+    }
 }
 
 @media (max-width: 480px) {
+    :root {
+        --space-4xl: 3rem;
+        --space-3xl: 2rem;
+        --space-2xl: 1.5rem;
+    }
+    
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .hero-cta {
@@ -748,9 +893,62 @@
 
     .btn-lg {
         width: 100%;
+        padding: var(--space-md) var(--space-xl);
+    }
+    
+    .btn-sm {
+        padding: var(--space-sm) var(--space-md);
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .stat-item {
+        padding: var(--space-md);
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-card {
+        padding: var(--space-lg);
+    }
+    
+    .portfolio-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .testimonials-slider {
+        padding-left: var(--space-md);
+    }
+    
+    .testimonial-card {
+        min-width: 260px;
+    }
+    
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-icon {
+        margin: 0 auto;
+    }
+    
+    .service-features {
+        justify-content: center;
     }
 }
