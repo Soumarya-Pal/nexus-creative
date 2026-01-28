@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore Nexus Creative's comprehensive digital marketing and creative services - from brand strategy to web development and SEO.">
+    <title>Our Services | Nexus Creative</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <style>
+        .service-detail {
+            padding: var(--space-4xl) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .service-detail:last-child {
+            border-bottom: none;
+        }
+
+        .service-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4xl);
+            align-items: center;
+        }
+
+        .service-content.reverse {
+            direction: rtl;
+        }
+
+        .service-content.reverse>* {
+            direction: ltr;
+        }
+
+        .service-content h3 {
+            font-size: 2rem;
+            margin-bottom: var(--space-lg);
+        }
+
+        .service-content p {
+            margin-bottom: var(--space-lg);
+        }
+
+        .service-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .service-feature {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) var(--space-md);
+            background: var(--bg-secondary);
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .service-feature svg {
+            width: 16px;
+            height: 16px;
+            color: var(--primary);
+        }
+
+        .service-image {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+
+            .service-content,
+            .service-content.reverse {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Nexus Creative"
+                    class="logo-icon"><span>Nexus<span class="text-gradient">Creative</span></span></a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="work.html" class="nav-link">Work</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-toggle" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.35-4.35" />
+                        </svg></button>
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5" />
+                            <path
+                                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Get Started</a>
+                </div>
+                <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Services</span></div>
+            <h1>Our <span class="text-gradient">Services</span></h1>
+            <p>Comprehensive digital solutions tailored to elevate your brand and drive business growth.</p>
+        </div>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="section">
+        <div class="container">
+            <!-- Brand Strategy -->
+            <div class="service-detail" id="brand-strategy">
+                <div class="service-content" data-animate>
+                    <div>
+                        <h3><span class="text-gradient">Brand Strategy</span></h3>
+                        <p>Your brand is more than just a logo – it's the complete experience your customers have with
+                            your company. We help you develop a comprehensive brand strategy that defines who you are,
+                            what you stand for, and how you communicate with your audience.</p>
+                        <p>Through research, workshops, and creative exploration, we craft brand identities that
+                            resonate with your target market and set you apart from the competition.</p>
+                        <div class="service-features">
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Brand Positioning</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Visual Identity</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Brand Guidelines</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Messaging Framework</span>
+                        </div>
+                    </div>
+                    <div class="service-image"><img
+                            src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&h=400&fit=crop"
+                            alt="Brand Strategy"></div>
+                </div>
+            </div>
+
+            <!-- Web Design -->
+            <div class="service-detail" id="web-design">
+                <div class="service-content reverse" data-animate>
+                    <div>
+                        <h3><span class="text-gradient">Web Design & Development</span></h3>
+                        <p>In today's digital-first world, your website is often the first impression customers have of
+                            your business. We create stunning, user-friendly websites that not only look beautiful but
+                            also perform exceptionally well.</p>
+                        <p>From custom designs to e-commerce platforms, we build websites that are responsive,
+                            accessible, and optimized for conversions. Every line of code is crafted with performance
+                            and scalability in mind.</p>
+                        <div class="service-features">
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Custom Design</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Responsive Development</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>E-commerce</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>CMS Integration</span>
+                        </div>
+                    </div>
+                    <div class="service-image"><img
+                            src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=400&fit=crop"
+                            alt="Web Design"></div>
+                </div>
+            </div>
+
+            <!-- Digital Marketing -->
+            <div class="service-detail" id="digital-marketing">
+                <div class="service-content" data-animate>
+                    <div>
+                        <h3><span class="text-gradient">Digital Marketing</span></h3>
+                        <p>Reach your target audience where they spend their time. Our data-driven digital marketing
+                            strategies combine multiple channels to maximize your ROI and drive measurable business
+                            results.</p>
+                        <p>We don't just run campaigns – we build comprehensive marketing ecosystems that nurture leads,
+                            build brand awareness, and convert prospects into loyal customers.</p>
+                        <div class="service-features">
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>PPC Advertising</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Email Marketing</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Analytics & Reporting</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Conversion Optimization</span>
+                        </div>
+                    </div>
+                    <div class="service-image"><img
+                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+                            alt="Digital Marketing"></div>
+                </div>
+            </div>
+
+            <!-- Content Creation -->
+            <div class="service-detail" id="content-creation">
+                <div class="service-content reverse" data-animate>
+                    <div>
+                        <h3><span class="text-gradient">Content Creation</span></h3>
+                        <p>Content is the fuel that powers digital marketing. We create compelling, valuable content
+                            that educates, entertains, and inspires your audience to take action.</p>
+                        <p>From blog posts and whitepapers to videos and infographics, our content team crafts stories
+                            that connect with your audience on an emotional level and position your brand as a thought
+                            leader in your industry.</p>
+                        <div class="service-features">
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Blog Writing</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Video Production</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Copywriting</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Visual Content</span>
+                        </div>
+                    </div>
+                    <div class="service-image"><img
+                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+                            alt="Content Creation"></div>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="service-detail" id="social-media">
+                <div class="service-content" data-animate>
+                    <div>
+                        <h3><span class="text-gradient">Social Media Management</span></h3>
+                        <p>Social media is where your customers are. We help you build and maintain a strong social
+                            presence that engages your audience, builds community, and drives brand loyalty.</p>
+                        <p>Our social media strategies go beyond posting – we create meaningful interactions, monitor
+                            trends, and leverage data insights to continuously improve your social performance.</p>
+                        <div class="service-features">
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Strategy Development</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Content Calendar</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Community Management</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Influencer Marketing</span>
+                        </div>
+                    </div>
+                    <div class="service-image"><img
+                            src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&h=400&fit=crop"
+                            alt="Social Media"></div>
+                </div>
+            </div>
+
+            <!-- SEO -->
+            <div class="service-detail" id="seo">
+                <div class="service-content reverse" data-animate>
+                    <div>
+                        <h3><span class="text-gradient">SEO Optimization</span></h3>
+                        <p>Organic search is one of the most valuable channels for sustainable business growth. We
+                            implement proven SEO strategies that improve your visibility, drive qualified traffic, and
+                            establish your domain authority.</p>
+                        <p>From technical audits to content optimization and link building, we take a holistic approach
+                            to search engine optimization that delivers long-term results.</p>
+                        <div class="service-features">
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Technical SEO</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Keyword Research</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Content Strategy</span>
+                            <span class="service-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>Link Building</span>
+                        </div>
+                    </div>
+                    <div class="service-image"><img
+                            src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=600&h=400&fit=crop"
+                            alt="SEO"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Digital Presence?</h2>
+            <p>Let's discuss how our services can help you achieve your business goals.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="index.html" class="logo"><img src="assets/logo.svg"
+                            alt="Nexus Creative" class="logo-icon"><span>Nexus<span
+                                class="text-gradient">Creative</span></span></a>
+                    <p>A full-service digital agency crafting compelling brand experiences through strategy, design, and
+                        technology.</p>
+                    <div class="footer-social"><a href="#" aria-label="Twitter"><svg width="18" height="18"
+                                viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg></a><a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg></a><a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z" />
+                            </svg></a></div>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#brand-strategy">Brand Strategy</a></li>
+                        <li><a href="services.html#web-design">Web Design</a></li>
+                        <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
+                        <li><a href="services.html#seo">SEO Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@nexuscreative.com">hello@nexuscreative.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nexus Creative. All rights reserved.</p>
+                <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="search-modal">
+        <div class="search-container">
+            <div class="search-input-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.35-4.35" />
+                </svg><input type="text" class="search-input" placeholder="Search pages, services, team..."><button
+                    class="search-close">ESC</button></div>
+            <div class="search-results">
+                <p class="search-empty">Start typing to search...</p>
+            </div>
+        </div>
+    </div>
+    <button class="back-to-top" aria-label="Back to top"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6" />
+        </svg></button>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>
